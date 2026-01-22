@@ -1,0 +1,70 @@
+:root{
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --text: #111827;
+  --muted: #6b7280;
+  --primary: var(--c-gradient-from);
+  --accent: var(--c-gradient-to);
+  --font-main: Inter, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility overrides for Tailwind to use variables */
+.bg-primary { background-color: var(--primary) !important; }
+.text-primary { color: var(--primary) !important; }
+.border-primary { border-color: var(--primary) !important; }
+
+a{color:inherit;text-decoration:none}
+img,video{display:block;max-width:100%}
+button{cursor:pointer}
+
+:root {
+  --c-bg: #0b0b0f;
+  --c-surface: #111118;
+  --c-primary: #6d5efc;
+  --c-accent: #6d5efc;
+  --c-text: #ffffff;
+  --c-muted: #a1a1aa;
+  --c-border: #ffffff14;
+
+  --r: 14px;
+  --shadow-soft: 0 10px 30px rgba(0,0,0,.25);
+
+  --font-primary: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-heading: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.replica-root {
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--font-primary);
+}
+
+.replica-section { background: transparent; }
+
+.replica-card {
+  background: color-mix(in oklab, var(--c-surface) 92%, transparent);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-soft);
+}
+
+.replica-heading { color: var(--c-text); font-family: var(--font-heading); }
+.replica-text { color: var(--c-muted); }
+
+.replica-button {
+  background: var(--c-primary);
+  color: var(--c-text);
+  border-radius: calc(var(--r) - 6px);
+}
+
