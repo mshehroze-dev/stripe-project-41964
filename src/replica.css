@@ -1,0 +1,75 @@
+
+:root {
+  --c-bg: #0c0f14;
+  --c-fg: #e5e7eb;
+  --c-primary: #6366f1;
+  --c-accent: #6366f1;
+  --c-surface: #0c0f14;
+
+  --radius: 12px;
+  --shadow-soft: 0 8px 20px rgba(0,0,0,0.18);
+  --font-primary: Inter, sans-serif;
+}
+
+/* Base typography and background */
+html, body {
+  background: var(--c-bg);
+  color: var(--c-fg);
+  font-family: var(--font-primary);
+}
+
+/* Map common Tailwind colors to replica palette */
+.bg-white, .bg-gray-50, .bg-gray-100 { background: var(--c-bg) !important; }
+.bg-slate-900, .bg-gray-900 { background: var(--c-bg) !important; }
+.text-gray-900, .text-slate-900, .text-black { color: var(--c-fg) !important; }
+.text-gray-600, .text-gray-500 { color: rgba(255,255,255,0.72) !important; }
+.bg-indigo-600, .bg-blue-600, .bg-primary-600 { background: var(--c-primary) !important; }
+.hover\:bg-indigo-700:hover, .hover\:bg-blue-700:hover { background: color-mix(in srgb, var(--c-primary) 85%, black) !important; }
+.text-indigo-600, .text-blue-600 { color: var(--c-primary) !important; }
+.border-gray-200, .border-gray-300 { border-color: rgba(255,255,255,0.12) !important; }
+
+/* Utilities */
+.btn-primary {
+  background: var(--c-primary);
+  color: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.card, .section-fallback, .section-custom {
+  background: var(--c-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+a { color: var(--c-primary); }
+
+/* Replica component classes for template usage */
+.replica-root {
+  background: var(--c-bg);
+  color: var(--c-fg);
+}
+
+.replica-section {
+  background: var(--c-surface);
+  padding: 6rem 0;
+}
+
+.replica-card {
+  background: var(--c-surface);
+  border-color: rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+}
+
+.replica-heading {
+  color: var(--c-fg);
+}
+
+.replica-text {
+  color: rgba(255,255,255,0.72);
+}
+
+.replica-button {
+  background: var(--c-primary);
+  border-radius: var(--radius);
+}
